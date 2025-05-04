@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore dataset files (optional for large files)
+data/*.csv
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore system/OS files
+.DS_Store
+Thumbs.db
+
+# Ignore output files
+*.log
+*.pdf
+*.pptx
