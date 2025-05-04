@@ -95,7 +95,7 @@ jupyter notebook COVID-19_Global_Tracker.ipynb
 
 ## ✅ Status
 
-Project complete for Week 5 assignment. Additional features like advanced dashboards or time-lapse maps can be added in future iterations.
+Project complete for Week 8 assignment. Additional features like advanced dashboards or time-lapse maps can be added in future iterations.
 
 ---
 
