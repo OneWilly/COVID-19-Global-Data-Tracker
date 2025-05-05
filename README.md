@@ -39,21 +39,60 @@ Install dependencies with:
 pip install -r requirements.txt
 ```
 
-## Usage
+## Setup & Usage
+
+### Installation
 1. Clone the repository:
-   ```
+   ```bash
    git clone https://github.com/OneWilly/covid19-data-tracker.git
    cd covid19-data-tracker
    ```
 
-2. Download the dataset from Our World in Data and save as `owid-covid-data.csv` in the data directory
-
-3. Run the analysis:
+2. Create and activate a virtual environment (optional but recommended):
+   ```bash
+   # On Windows
+   python -m venv venv
+   venv\Scripts\activate
+   
+   # On macOS/Linux
+   python -m venv venv
+   source venv/bin/activate
    ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Data Preparation
+1. Download the dataset from [Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data)
+2. Save as `owid-covid-data.csv` in the `data/` directory
+3. If the data directory doesn't exist, create it:
+   ```bash
+   mkdir -p data
+   ```
+
+### Running the Analysis
+1. Run the Python script:
+   ```bash
    python covid_analysis.py
    ```
 
-4. View the generated visualizations in the outputs directory
+2. For notebook version (recommended for exploration):
+   ```bash
+   # Convert script to notebook
+   python -c "import nbformat as nbf; code = open('covid_analysis.py').read(); nb = nbf.v4.new_notebook(); nb['cells'] = [nbf.v4.new_code_cell(code)]; nbf.write(nb, 'COVID-19-Analysis.ipynb')"
+   
+   # Run Jupyter
+   jupyter notebook COVID-19-Analysis.ipynb
+   ```
+
+3. To generate PDF report from notebook:
+   ```bash
+   jupyter nbconvert --to pdf COVID-19-Analysis.ipynb
+   ```
+
+4. The visualizations will be generated in the root directory or `outputs/` if it exists
 
 ## Generated Visualizations
 - Total cases over time by country
