@@ -27,7 +27,7 @@ print("-------------------------------------")
 
 # Load the dataset
 try:
-    df = pd.read_csv('owid-covid-data.csv')
+    df = pd.read_csv('data/owid-covid-data.csv')
     print(f"✅ Data loaded successfully. Shape: {df.shape}")
 except FileNotFoundError:
     print("❌ Error: The file 'owid-covid-data.csv' was not found.")
